@@ -1,0 +1,15 @@
+head
+  title test
+
+body
+  +loginButtons
+  
+  +hello
+  
+template(name='hello')  
+  +if currentUser
+    input(type="file" name="filedata" multiple="true")
+      
+  +each photos
+    h5 {{this.url}}
+  
