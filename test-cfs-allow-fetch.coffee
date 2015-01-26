@@ -38,7 +38,7 @@ Photos.allow
     userId and file.metadata?.userId is userId
   download: (userId, file, shareId) ->
     true
-  fetch: ['metadata.userId'] # TODO: https://github.com/CollectionFS/Meteor-CollectionFS/issues/518
+  fetch: ['metadata.userId','original'] # TODO: https://github.com/CollectionFS/Meteor-CollectionFS/issues/518
 
 if Meteor.isClient
   Template.hello.events
