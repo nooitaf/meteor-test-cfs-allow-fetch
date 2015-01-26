@@ -47,10 +47,10 @@ if Meteor.isClient
       count = files.length
       i = 0
       while i < count
-        file = new FS.File(files[i])
-        file.metadata = userId: Meteor.userId()
+        newFile = new FS.File(files[i])
+        newFile.metadata = userId: Meteor.userId()
         # file.status = 'notReady'
-        Photos.insert file, (error, file) ->
+        Photos.insert newFile, (error, file) ->
           throw error if error
           # If !error, we have inserted new doc with ID fileObj._id, and
           # kicked off the data upload using HTTP
